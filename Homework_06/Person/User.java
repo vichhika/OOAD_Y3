@@ -2,7 +2,7 @@ package Person;
 
 public class User {
     // property :
-    private String id;
+    protected String id;
     private String name;
     private String address;
     private String email;
