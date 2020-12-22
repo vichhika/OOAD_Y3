@@ -20,7 +20,7 @@ public class Request {
         this.requestID = id;
     }
     public ArrayList<Book> getRequestBook(){
-    
+        return requestedBook;
     }
 
 }

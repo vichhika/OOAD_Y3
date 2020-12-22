@@ -16,13 +16,13 @@ public class BorrowingHistory {
 
     }
     public int getNumBooksBorrowed(){
-        
+        return BorrowedBook.size();
     }
     public void returnBooks(String books){
 
     }
     public ArrayList<Book> viewBorrowingHistory(){
-
+        return BorrowedBook;
     }
 
     public String getBorrowerID(){
