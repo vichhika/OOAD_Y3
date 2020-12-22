@@ -1,9 +1,13 @@
 package Person;
 
+import LibraryClass.Book;
+
 public class Admin {
     // property :
     private String adminID;
     private String email;
+    private Book book = new Book();
+    private User user = new User();
     
     // method :
     public String getAdminID(){
