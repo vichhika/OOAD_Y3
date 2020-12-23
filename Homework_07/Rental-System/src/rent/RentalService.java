@@ -1,6 +1,8 @@
 package rent;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import product.Product;
 
@@ -10,14 +12,18 @@ import product.Product;
  */
 public class RentalService {
 
-    public ArrayList<Product> products = new ArrayList<>();
+    public Map<String,ArrayList<Product>> products = new HashMap<>();
     public RentalHistory rentalHistory = new RentalHistory();
-
-    public RentalService(){
-
-    }
 
     public void DisplayRentalHistory(){
 
+    }
+
+    public void DisplayProduct(int productFilter){
+        ArrayList<Product> tmpProducts;
+        tmpProducts = productFilter == 1 ? products.get("house"):products.get("car");
+        for(Product x:tmpProducts){ 
+            System.out.println(x.printProduct());
+        }
     }
 }

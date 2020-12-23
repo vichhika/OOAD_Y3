@@ -1,6 +1,5 @@
 package rent;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -8,7 +7,7 @@ import java.util.ArrayList;
  */
 public class RentalHistory {
 
-    private ArrayList<ArrayList<Rental>> rentalRecord = new ArrayList<ArrayList<Rental>>();
+    private ArrayList<ArrayList<Rental>> rentalRecord = new ArrayList<ArrayList<Rental>>(); //change here for single user
 
     public void addNewRental(Rental newRental){
 
@@ -18,7 +17,7 @@ public class RentalHistory {
         
     }
 
-    public ArrayList<Rental> getRentalHistory(Rental record){
-        
+    public ArrayList<Rental> getRentalHistory(String CusId){
+
     }
 }

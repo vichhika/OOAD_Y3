@@ -14,8 +14,14 @@ public class House implements Product{
     private boolean ParkingLot;
     
     
-    public House(){
-
+    public House(String id,String size,String location,String type,String bedroom,String bathroom,boolean parkingLot){
+        setId(id);
+        setLocation(location);
+        setType(type);
+        setBedRoom(bedroom);
+        setBathRoom(bathroom);
+        setParkingLot(parkingLot);
+        setSize(size);
     }
 
     public void setId(String id){
@@ -77,6 +83,6 @@ public class House implements Product{
     @Override
     public String printProduct() {
         // TODO Auto-generated method stub
-
+        return this.id + " |\t" + this.size + "\t|\t" + this.location + "   \t|\t" + this.bedRoom + "\t|\t" + this.bathRoom + "\t|\t" + this.ParkingLot;
     }
 }

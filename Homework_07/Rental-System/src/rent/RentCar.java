@@ -8,12 +8,8 @@ public class RentCar implements Rental{
     private String dateRent;
     private String period;
     private String price;
-    private String limit;
+    private final String limit = "700km";
 
-    public void setLimit(String limit){
-        
-    }
-    
     public String getLimit(){
        return this.limit; 
     }

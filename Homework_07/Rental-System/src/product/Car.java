@@ -9,7 +9,11 @@ public class Car implements Product{
     private String plateNumber;
     private String brand;
 
-    public Car(String brand){
+    public Car(String id,String color,String plateNumber,String brand){
+        setID(id);
+        setColor(color);
+        setPlateNumber(plateNumber);
+        setBrand(brand);
     }
 
     public void setID(String id){
@@ -47,6 +51,7 @@ public class Car implements Product{
     @Override
     public String printProduct() {
         // TODO Auto-generated method stub
+        return this.id + " |\t" + this.brand + "\t|\t" + this.color + "\t| " + this.plateNumber ; 
     }
 
 }
