@@ -37,18 +37,23 @@ public class App {
             System.out.println("1. Add a new rent");
             System.out.println("2. Display rental history");
             System.out.println("0. Exit");
+            System.out.println("-----------------------");
             System.out.print("Choose:");
             switch (input.nextLine()) {
                 case "1":
+                    System.out.println("-----------------------");
                     System.out.println("1. House");
                     System.out.println("2. Car");
                     System.out.println("Otherwise. Back");
+                    System.out.println("-----------------------");
                     System.out.print("Choose:");
                     switch (input.nextLine()) {
                         case "1":
+                            System.out.println("----------------------------------------------------------------------------------------------");
                             System.out.println("ID |\tSize\t\t|\tLocation\t|  Bed Room\t|  Bath Room\t|  ParkingLot  ");
                             System.out.println("----------------------------------------------------------------------------------------------");
                             rentalService.DisplayProduct(1);
+                            System.out.println("----------------------------------------------------------------------------------------------");
                             //add rent for house here
                             Rental rentHouse = (RentHouse) rentalService.AddNewRent("House");
                             // set userId:
@@ -57,11 +62,14 @@ public class App {
                             rentHouse.filledInInfo();
                             // add new contract to rental History:
                             rentalService.rentalHistory.addNewRental(rentHouse);
+                            System.out.println("Succesfully Rent!");
                             break;
                         case "2":
+                            System.out.println("-------------------------------------------------------------");
                             System.out.println("ID |  Brand\t|\tColor\t| Plate Number");
                             System.out.println("-------------------------------------------------------------");
                             rentalService.DisplayProduct(2);
+                            System.out.println("-------------------------------------------------------------");
                             //add rent for car here
                             Rental rentCar = rentalService.AddNewRent("Car");
                             // set userId:
@@ -70,11 +78,12 @@ public class App {
                             rentCar.filledInInfo();
                             // add new contract to rental History:
                             rentalService.rentalHistory.addNewRental(rentCar);
+                            System.out.println("Succesfully Rent!");
                             break;
                         default:
                             break;
                     }
-                    System.out.println("");
+                    System.out.println("_______________________________________________________________________");
                     break;
                 case "2": 
                     //Display history here
