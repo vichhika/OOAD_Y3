@@ -5,6 +5,7 @@ import product.Car;
 import product.House;
 import product.Product;
 import rent.RentalService;
+import rent.RentalServiceSystem;
 
 public class App {
 

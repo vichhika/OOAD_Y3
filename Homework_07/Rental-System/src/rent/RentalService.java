@@ -10,7 +10,7 @@ import product.Product;
 /**
  * RentalService
  */
-public class RentalService {
+public class RentalService extends RentalServiceSystem{
 
     public Map<String,ArrayList<Product>> products = new HashMap<>();
     public RentalHistory rentalHistory = new RentalHistory();
@@ -25,5 +25,11 @@ public class RentalService {
         for(Product x:tmpProducts){ 
             System.out.println(x.printProduct());
         }
+    }
+
+    @Override
+    public Rental AddNewRent() {
+        // TODO Auto-generated method stub
+        return null;
     }
 }
