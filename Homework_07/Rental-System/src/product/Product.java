@@ -1,5 +1,5 @@
 package product;
 
 public interface Product {
-    public void printProduct();    
+    public String printProduct();    
 }

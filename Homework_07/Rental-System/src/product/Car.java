@@ -1,9 +1,5 @@
 package product;
 
-import java.util.ArrayList;
-
-import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
-
 /**
  * Car
  */
@@ -14,23 +10,22 @@ public class Car implements Product{
     private String brand;
 
     public Car(String brand){
-        this.brand = brand;
     }
 
     public void setID(String id){
-
+        this.id = id;
     }
     
     public void setColor(String color){
-
+        this.color = color;
     }
 
     public void setPlateNumber(String plateNumber){
-
+        this.plateNumber = plateNumber;
     }
 
     public void setBrand(String brand){
-
+        this.brand = brand;
     }
     
     public String getID(){
@@ -50,10 +45,8 @@ public class Car implements Product{
     }
 
     @Override
-    public void printProduct() {
+    public String printProduct() {
         // TODO Auto-generated method stub
-        System.out.println(this.brand);
-
     }
 
 }
