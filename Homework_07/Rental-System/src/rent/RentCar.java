@@ -9,7 +9,11 @@ public class RentCar implements Rental{
     private String period;
     private String price;
     private final String limit = "700km";
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
     public String getLimit(){
        return this.limit; 
     }
