@@ -83,6 +83,6 @@ public class House implements Product{
     @Override
     public String printProduct() {
         // TODO Auto-generated method stub
-        return this.id + " |\t" + this.size + "\t|\t" + this.location + "   \t|\t" + this.bedRoom + "\t|\t" + this.bathRoom + "\t|\t" + this.ParkingLot;
+        return this.id + " |\t" + this.size + "\t|\t" + this.type + "   \t\t\t|\t" + this.location + "   \t|\t" + this.bedRoom + "\t|\t" + this.bathRoom + "\t|\t" + this.ParkingLot;
     }
 }

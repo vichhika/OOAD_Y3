@@ -10,7 +10,7 @@ public class RentCar implements Rental {
     private String dateRent;
     private String period;
     private String price;
-    private final String limit = "700km";
+    private final String limit = "700km/per day";
 
     public String getLimit(){
        return this.limit; 
@@ -108,6 +108,7 @@ public class RentCar implements Rental {
         System.out.println("______Rent Car______:");
         System.out.println("RentID: " + id);
         System.out.println("UserID: " + userId);
+        System.out.println("DateRent: " + dateRent);
         System.out.println("Period: " + period);
         System.out.println("Price: " + price);
         System.out.println("Limit: " + limit);

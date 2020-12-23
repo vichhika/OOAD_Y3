@@ -28,6 +28,15 @@ public class App {
         rentalService.products.put("house", houses);
         rentalService.products.put("car", cars);
     }
+    public static void registerNewRent(String type){
+        Rental rent = rentalService.AddNewRent(type);
+        // set userId:
+        rent.setUserId("Cus1");
+        // filled in info:
+        rent.filledInInfo();
+        // add new contract to rental History:
+        rentalService.rentalHistory.addNewRental(rent);
+    }
 
 
     public static void menu(){
@@ -49,19 +58,13 @@ public class App {
                     System.out.print("Choose:");
                     switch (input.nextLine()) {
                         case "1":
-                            System.out.println("----------------------------------------------------------------------------------------------");
-                            System.out.println("ID |\tSize\t\t|\tLocation\t|  Bed Room\t|  Bath Room\t|  ParkingLot  ");
-                            System.out.println("----------------------------------------------------------------------------------------------");
+                            System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
+                            System.out.println("ID |\tSize\t\t|\tType\t\t\t|\tLocation\t|  Bed Room\t|  Bath Room\t|  ParkingLot  ");
+                            System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
                             rentalService.DisplayProduct(1);
-                            System.out.println("----------------------------------------------------------------------------------------------");
+                            System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
                             //add rent for house here
-                            Rental rentHouse = (RentHouse) rentalService.AddNewRent("House");
-                            // set userId:
-                            rentHouse.setUserId("Cus1");
-                            // filled in info:
-                            rentHouse.filledInInfo();
-                            // add new contract to rental History:
-                            rentalService.rentalHistory.addNewRental(rentHouse);
+                            registerNewRent("House");
                             System.out.println("Succesfully Rent!");
                             break;
                         case "2":
@@ -71,13 +74,7 @@ public class App {
                             rentalService.DisplayProduct(2);
                             System.out.println("-------------------------------------------------------------");
                             //add rent for car here
-                            Rental rentCar = rentalService.AddNewRent("Car");
-                            // set userId:
-                            rentCar.setUserId("Cus1");
-                            // filled in info:
-                            rentCar.filledInInfo();
-                            // add new contract to rental History:
-                            rentalService.rentalHistory.addNewRental(rentCar);
+                            registerNewRent("Car");
                             System.out.println("Succesfully Rent!");
                             break;
                         default:
