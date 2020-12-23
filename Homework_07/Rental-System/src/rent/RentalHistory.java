@@ -7,17 +7,23 @@ import java.util.ArrayList;
  */
 public class RentalHistory {
 
-    private ArrayList<ArrayList<Rental>> rentalRecord = new ArrayList<ArrayList<Rental>>(); //change here for single user
+    private ArrayList<Rental> rentalRecord = new ArrayList<Rental>(); //change here for single user
 
     public void addNewRental(Rental newRental){
-
+        rentalRecord.add(newRental);
     }
 
     public void removeRental(Rental rental){
-        
+        rentalRecord.remove(rental);
     }
 
-    public ArrayList<Rental> getRentalHistory(String CusId){
-
+    public ArrayList<Rental> getRentalHistory(){
+        return rentalRecord;
+    }
+    public Rental getRentalAt(int i){
+        return rentalRecord.get(i);
+    }
+    public int Size(){
+        return rentalRecord.size();
     }
 }

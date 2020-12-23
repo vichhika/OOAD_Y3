@@ -4,6 +4,9 @@ import java.util.Scanner;
 import product.Car;
 import product.House;
 import product.Product;
+import rent.RentCar;
+import rent.RentHouse;
+import rent.Rental;
 import rent.RentalService;
 import rent.RentalServiceSystem;
 
@@ -12,7 +15,7 @@ public class App {
     private static Scanner input = new Scanner(System.in);
     private static ArrayList<Product> houses = new ArrayList<>();
     private static ArrayList<Product> cars = new ArrayList<>();
-    private static RentalService rentalService = new RentalService();
+    private static RentalServiceSystem rentalService = new RentalService();
 
     public static void initProduct(){
         houses.add(new House("h1","16m x 6m","Phnom Penh", "Vila", "5", "2", true));
@@ -47,19 +50,34 @@ public class App {
                             System.out.println("----------------------------------------------------------------------------------------------");
                             rentalService.DisplayProduct(1);
                             //add rent for house here
+                            Rental rentHouse = (RentHouse) rentalService.AddNewRent("House");
+                            // set userId:
+                            rentHouse.setUserId("Cus1");
+                            // filled in info:
+                            rentHouse.filledInInfo();
+                            // add new contract to rental History:
+                            rentalService.rentalHistory.addNewRental(rentHouse);
                             break;
                         case "2":
                             System.out.println("ID |  Brand\t|\tColor\t| Plate Number");
                             System.out.println("-------------------------------------------------------------");
                             rentalService.DisplayProduct(2);
                             //add rent for car here
+                            Rental rentCar = rentalService.AddNewRent("Car");
+                            // set userId:
+                            rentCar.setUserId("Cus1");
+                            // filled in info:
+                            rentCar.filledInInfo();
+                            // add new contract to rental History:
+                            rentalService.rentalHistory.addNewRental(rentCar);
                             break;
                         default:
                             break;
                     }
                     break;
-                case "2":
+                case "2": 
                     //Display history here
+                    rentalService.DisplayRentalHistory();
                     break;
                 case "0":
                     return;
