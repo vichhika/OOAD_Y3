@@ -74,10 +74,13 @@ public class App {
                         default:
                             break;
                     }
+                    System.out.println("");
                     break;
                 case "2": 
                     //Display history here
+                    System.out.println("");
                     rentalService.DisplayRentalHistory();
+                    System.out.println("");
                     break;
                 case "0":
                     return;
