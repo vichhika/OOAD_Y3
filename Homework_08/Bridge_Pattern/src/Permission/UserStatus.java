@@ -1,4 +1,8 @@
-abstract class UserStatus{
+package Permission;
+import person.Person;
+import java.util.ArrayList;
+
+public abstract class UserStatus{
     void addHW(ArrayList<String> Homework,String homework,Person teacher){
 
     }
