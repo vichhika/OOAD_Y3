@@ -1,3 +1,3 @@
-public class Foreign {
+public class Foreign extends UserStatus{
     
 }
