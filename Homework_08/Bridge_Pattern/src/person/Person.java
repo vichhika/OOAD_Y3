@@ -1,4 +1,6 @@
 package person;
+
+import Material.Dorm;
 import Permission.*;
 
 
@@ -50,5 +52,12 @@ public abstract class Person {
     }
     public String getEmail(){
         return this.email;
+    }
+    public void requestDorm(Dorm dorm){
+        if(userStatus instanceof Foreign){
+            ((Foreign)userStatus).requestDorm(this, dorm);
+        } else{
+            System.out.println("Your are not Foreign");
+        }
     }
 }

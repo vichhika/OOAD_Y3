@@ -23,7 +23,7 @@ public class Dorm {
         if(!room.isEmpty()){
             tmpRoom = room.get(0);
             room.remove(0);
-            System.out.print("Your Dorm Room name is " +tmpRoom);
+            System.out.println("Your Dorm Room name is " +tmpRoom);
         }else{
             System.out.println("Room is available F*!");
         }

@@ -15,9 +15,4 @@ public class Teacher extends Person {
         userStatus.addHW(homework);
     }
 
-    public void requestDorm(Dorm dorm) {
-        if (userStatus instanceof Foreign) {
-            ((Foreign) userStatus).requestDorm(this, dorm);
-        }
-    }
 }

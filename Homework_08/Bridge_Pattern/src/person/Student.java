@@ -25,11 +25,4 @@ public class Student extends Person{
            System.out.println(string);
        }
     }
-    public void requestDorm(Dorm dorm){
-        if(userStatus instanceof Foreign){
-            ((Foreign)userStatus).requestDorm(this, dorm);
-        } else{
-            System.out.println("Your are not Foreign");
-        } 
-    }
 }
