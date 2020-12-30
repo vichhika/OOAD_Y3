@@ -19,7 +19,7 @@ public class Dorm {
     }
 
     public String getRoom(){
-        String tmpRoom;
+        String tmpRoom = new String();
         if(!room.isEmpty()){
             tmpRoom = room.get(0);
             room.remove(0);
