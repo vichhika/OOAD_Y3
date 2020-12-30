@@ -1,11 +1,18 @@
+import java.util.*;
+
+import Material.Homework;
+import person.*;
+
 abstract class UserStatus{
-    void addHW(ArrayList<String> Homework,String homework,Person teacher){
-
+    
+    void addHW(Homework homework,String title){
+        homework.setHomework(title);
+        System.out.println("Add new homework done!");
     }
-    void viewHW(Person student,ArrayList<String> Homework){
-
+    void viewHW(Homework homework){
+        homework.getHomework();
     }
-    void submitHW(Person student,int homeworkID){
+    void submitHW(Student student,int homeworkID){
         
     }
 }

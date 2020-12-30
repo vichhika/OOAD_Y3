@@ -9,7 +9,7 @@ public class Homework {
 
     private ArrayList<String> homework = new ArrayList<>();
 
-    public setHomework(String title){
+    public void setHomework(String title){
         homework.add(title);
     }
 
